@@ -2,5 +2,5 @@
 Project
 First Name: Arghavan
 Last Name: Katebi
-Email: Ari.kate128@gmail.com
+Email: Ak3426@njit.edu
 Course: IT202-Lecture
