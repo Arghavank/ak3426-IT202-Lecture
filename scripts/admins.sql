@@ -18,21 +18,21 @@ DESCRIBE admins;
 INSERT INTO admins
 (emailAddress, password, firstName, lastName)
 VALUES
-('taylor@guitarshop.com', SHA2('myLongP@ssword',256), 'Taylor', 'Swift');
+('taylor@guitarshop.com', SHA2('myL0ngP@ssword',256), 'Taylor', 'Swift');
 INSERT INTO admins
 (emailAddress, password, firstName, lastName)
 VALUES
-('Pinkfloyd@guitarshop.com', SHA2('myLongP@ssword', 256), 'Pink', 'Floyd');
+('Pinkfloyd@guitarshop.com', SHA2('myL0ngPassword', 256), 'Pink', 'Floyd');
 
 
 
 
-select * from admins;
+SELECT * FROM admins;
 SELECT emailAddress,firstName FROM admins ORDER BY firstName;
 SELECT * FROM admins WHERE lastName ='Swift';
-UPDATE admins SET emailAddress ="Bob.Marley@guitarshop.com" WHERE adminID =15;
+UPDATE admins SET emailAddress ="taylor.swift@guitarshop.com" WHERE adminID =16php;
 UPDATE admins SET emailAddress = "Archive@guitarshop.com", password = SHA2("mySh0rtP@ssword",256) WHERE adminID =13 ;
-DELETE FROM admins WHERE adminID = 13;
+
 
 
 
