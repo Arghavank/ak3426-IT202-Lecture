@@ -30,8 +30,8 @@ SELECT * FROM admins;
 SELECT emailAddress, firstName FROM admins ORDER BY firstName;
 SELECT * FROM admins WHERE lastName = 'Swift';
 
-UPDATE admins SET emailAddress = 'taylor.swift@guitarshop.com' WHERE adminID = 1;
+UPDATE admins SET emailAddress = 'taylor.swift@guitarshop.com' WHERE adminID = 17;
 UPDATE admins SET emailAddress = 'justin.bieber@guitarshop.com', password = SHA2('mySh0rtP@ssword', 256) WHERE adminID = 2;
 
 
-DELETE FROM admins WHERE adminID = 1;
+DELETE FROM admins WHERE adminID = 16;
