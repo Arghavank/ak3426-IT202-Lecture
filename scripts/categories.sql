@@ -11,6 +11,7 @@ VALUES
 (100, 'GTR', 'Guitars');
 
 -- Optional
-DELETE from categories where categoryID = 100;
-
+DELETE from categories WHERE `categoryID`=1;
+DELETE FROM categories WHERE `categoryID`=2;
+DELETE FROM categories WHERE `categoryID`=3;
 SELECT * FROM categories;
