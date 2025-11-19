@@ -1,3 +1,4 @@
+
 body {
    font-family: Geneva, Tahoma, sans-serif;
    font-size: 80%;
@@ -45,6 +46,9 @@ footer {
    padding: 5px;
    border-top: 3px solid #f0e6d5;
    border-bottom: 3px solid #f0e6d5;
+   clear: both;
+   text-align: center;
+   width: 100%;
 }
 main {
    padding: 5px;
@@ -79,11 +83,6 @@ header {
    width: 20%;
 }
 
-footer {
- clear: both;
- text-align: center;
- width: 100%;
-}
 a, a:link {
  color: #ca7834;
 }

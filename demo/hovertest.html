@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing Mouse Events</title>
+        <style>
+            #test {
+                background-color: yellow;
+                width: 400px;
+            }
+        </style>
+        <script>
+            function changeit(state) {
+                if (state == "in") {
+                    console.log("mouseover triggered")
+                    document.getElementById("test").style.backgroundColor = "red";
+                } else if (state =="out") {
+                    console.log("mouseout triggered")
+                    document.getElementById("test").style.backgroundColor = "yellow";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>This is a tets of the mouse events</h1>
+        <p id="test" onmouseover="changeit('in')" onmouseout="changeit('out')">This is some content that will change color!</p>
+    </body>
+</html>

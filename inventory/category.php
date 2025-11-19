@@ -17,7 +17,7 @@ class Category
            "<h2>$this->categoryCode, $this->categoryName</h2>\n";
        return $output;
    }
-   function saveCategory()
+function saveCategory()
    {
        $db = getDB();
        $query = "INSERT INTO categories VALUES (?, ?, ?)";
@@ -35,7 +35,7 @@ class Category
    static function getCategories()
    {
        $db = getDB();
-       $query = "SELECT* FROM categories";
+       $query = "SELECT * FROM categories";
        $result = $db->query($query);
        if (mysqli_num_rows($result) > 0) {
            $categories = array();
@@ -55,7 +55,7 @@ class Category
            return NULL;
        }
    }
- static function findCategory($categoryID)
+   static function findCategory($categoryID)
    {
        $db = getDB();
        $query = "SELECT * FROM categories WHERE categoryID = $categoryID";
@@ -99,6 +99,19 @@ class Category
        $db->close();
        return $result;
    }
+   static function getTotalCategories()
+   {
+       $db = getDB();
+       $query = "SELECT COUNT(*) FROM categories";
+       $result = $db->query($query);
+       $row = $result->fetch_array();
 
+        if ($row) {
+            return $row[0];
+        } else {
+
+       return NULL;
+        }
+    }
 }
 ?>

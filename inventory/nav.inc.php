@@ -1,4 +1,4 @@
-  <?php
+<?php
    if (isset($_SESSION['login'])) {
    ?>
     <div class="navigation" style="float: left; height: 100%; min-width: 175px; width: auto;">
