@@ -21,7 +21,20 @@
  $model3 = $doc->createElement("model", "Mustang");
  $model3 = $car2->appendChild($model3);
 
- $output = $doc->saveXML();
- header("Content-type: application/xml");
- echo $output;
+ $car3 = $doc->createElement("car");
+ $car3 = $carlot->appendChild($car3);
+ $make3 = $doc->createAttribute("make");
+ 
+ $make3->value = "Toyota";
+ $car3->appendChild($make3);
+ $model4 = $doc->createElement("model", "Toyata");
+ $model4 = $car3->appendChild($model4);
+ $model5 = $doc->createElement("model", "Camery");
+ $model5 = $car3->appendChild($model5);
+ $model6 = $doc->createElement("model", "Rav4");
+ $model6 = $car3->appendChild($model6);
+
+$output = $doc->saveXML();
+header("Content-type: application/xml");
+echo $output;
 ?>

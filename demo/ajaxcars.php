@@ -10,6 +10,10 @@ switch ($make) {
    case "dodge":
        echo "Challenger,Charger,Viper";
        break;
-   case "ford":
-       echo "Fusion,Mustang,Taurus";
+    case "ford":
+        echo "Fusion,Mustang,Taurus";
+        break;
+    case "toyata":
+       echo  "Corolla,Camery,RAV4";
+        break;
 }
