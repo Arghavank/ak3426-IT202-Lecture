@@ -1,16 +1,28 @@
 function getRealTime() {
+
  // retrieve the DOM objects to place the content
+
  var domcategories = document.getElementById("categorycount");
+
  var domitems = document.getElementById("itemcount");
+
  var domlistpricetotal = document.getElementById("listpricetotal");
+
  // send the GET request to realtime.php to retrieve the data using XMLHttpRequest
+
  var request = new XMLHttpRequest();
+
  request.open("GET", "realtime.php", true);
+
  request.onreadystatechange = function() {
-     if (request.readyState == 4 && request.status== 200) {
+     if (request.readyState == 4 && request.status == 200) {
+
          // parse the XML document to get each data element
+
          var xmldoc = request.responseXML;
+
          var xmlcategories = xmldoc.getElementsByTagName("categories")[0];
+
          var categories = xmlcategories.childNodes[0].nodeValue;
 
          var xmlitems = xmldoc.getElementsByTagName("items")[0];
@@ -32,4 +44,5 @@ function getRealTime() {
  };
 
  request.send();
+
 }

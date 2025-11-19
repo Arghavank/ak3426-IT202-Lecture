@@ -1,4 +1,3 @@
-
 <?php
 
 ob_start();
@@ -14,7 +13,6 @@ $totalCategories = Category::getTotalCategories();
 $totalItems = Item::getTotalItems();
 
 $listpricetotal = Item::getTotalListPrice();
-
 $doc = new DOMDocument("1.0");
 
 $inventoryElement = $doc->createElement("inventory");
@@ -37,7 +35,7 @@ $itemsElement = $inventoryElement->appendChild($itemsElement);
 
 $listpricetotalElement = $doc->createElement("listpricetotal", $listpricetotal);
 
-$listpricetotalElement =$inventoryElement->appendChild($listpricetotalElement);
+$listpricetotalElement = $inventoryElement->appendChild($listpricetotalElement);
 
 $output = $doc->saveXML();
 

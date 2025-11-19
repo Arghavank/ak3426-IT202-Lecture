@@ -96,10 +96,10 @@ class Item
            $this->listPrice
        );
        $result = $stmt->execute();
-       $db->close();
+       $db-> close();
        return $result;
    }
- function removeItem()
+   function removeItem()
    {
        $db = getDB();
        $query = "DELETE FROM items WHERE itemID = $this->itemID";
@@ -107,7 +107,7 @@ class Item
        $db->close();
        return $result;
    }
-   static function getItemsByCategory($categoryID)
+    static function getItemsByCategory($categoryID)
    {
        $db = getDB();
        $query = "SELECT * from items where categoryID = $categoryID";
@@ -130,35 +130,35 @@ class Item
            return NULL;
        }
    }
+   static function getTotalItems()
+   {
+       $db = getDB();
+       $query = "SELECT COUNT(itemID) FROM items";
+       $result = $db->query($query);
 
-static function getTotalItems()
-{ 
-   $db =getDB();
-   $query = "SELECT COUNT(itemID) FROM items";
-   $result = $db->query($query);
+        $row = $result->fetch_array();
 
-   $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
 
-   if ($row) {
-       return $row[0];
-   } else {
-       return NULL;
-   }
-    
+        return NULL;
+    }
 }
-static function getTotalListPrice()
 
-{
-    $db =getDB();
-   $query = "SELECT SUM(listPrice) FROM items";
-   $result = $db->query($query);
-   $row = $result->fetch_array();
-   if ($row) {
-       return $row[0];
-   } else {
-       return NULL;
-   }
+    static function getTotalListPrice()
+    {
+        $db = getDB();
+        $query = "SELECT SUM(listPrice) FROM items";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
 
-}
+        if ($row) {
+        return $row[0];
+
+        } else {
+        return NULL;
+        }
+    }
 }
 ?>
