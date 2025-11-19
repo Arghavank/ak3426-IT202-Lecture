@@ -22,3 +22,12 @@ if ($items) {
   echo "<h2>No items found.</h2>";
 }
 ?>
+<script>
+    function selectFirstItem() {
+        const select = document.querySelector('select[name="itemID"]');
+        if (select && select.options.length > 0) {
+            select.selectedIndex = 0;
+        }
+    }
+    selectFirstItem();
+</script>
