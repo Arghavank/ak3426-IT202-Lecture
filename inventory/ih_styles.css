@@ -52,7 +52,7 @@ footer {
 }
 main {
    padding: 5px;
-   border-top: 3px solid #f0e6d5;
+   border-top: 3px solid #6f4d11;
    float: left;
    width: 55%;
    height: 100%;
@@ -78,7 +78,7 @@ header {
    border-right: 1px solid #f0e6d5;
    border-top: 1px solid #f0e6d5;
    border-left: 5px solid #f0e6d5;
-   color: white;
+   color: rgb(37, 180, 151);
    background-color: #872c14;
    width: 20%;
 }
@@ -88,24 +88,24 @@ a, a:link {
 }
 
 a:active {
- color: #7c6255;
+ color: #d45f24;
 }
 
 nav a, nav a:link {
- color: #fbd79c;
+ color: #5b3f12;
  text-decoration: none;
 }
 
 nav a:visited {
- color: #c59ad1;
+ color: #ad3c07;
 }
 
 nav a:hover {
- color: #b8999a;
+ color: #3e3737;
 }
 
 nav a:active {
- color: #7c6255;
+ color: #3e3737;
 }
 input {
  border: 2px solid #7c6255;
@@ -125,13 +125,13 @@ input:required:invalid {
 }
 
 input:required:valid {
- border-color: #c59ad1;
+ border-color: #dad0dd;
  background-color: #f0e6d5;
 }
 
 input:focus {
  outline: none;
  border-color: #ca7834;
- background-color: #f1b16f;
- box-shadow: 0 0 5px #ca7834;
+ background-color: #eadfd5;
+ box-shadow: 0 0 5px #faddc5;
 }
