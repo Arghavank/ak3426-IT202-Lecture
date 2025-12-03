@@ -2,7 +2,6 @@
 error_log("\$_POST " . print_r($_POST, true));
 require_once("category.php");
 if(isset($_SESSION['login'])){
-
 $categoryID = $_POST['categoryID'];
 $category = Category::findCategory($categoryID);
 $result = $category->removeCategory();
